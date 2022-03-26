@@ -1,7 +1,9 @@
 {
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs && cp 404.md docs/.vuepress/dist/ && cp CNAME docs/.vuepress/dist/"
+    "docs:build": "vuepress build docs && cp 404.md docs/.vuepress/dist/ && cp CNAME docs/.vuepress/dist/",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
@@ -29,6 +31,8 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.28",
     "vfg-field-object": "^0.0.0-development",
-    "vuepress-plugin-sitemap": "^2.1.2"
-  }
+    "vuepress-plugin-sitemap": "^2.1.2",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
